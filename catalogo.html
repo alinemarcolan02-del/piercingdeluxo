@@ -173,68 +173,6 @@ nav {
   border-color: var(--verde); background: var(--verde); color: white;
 }
 
-/* TABELA DE VALORES */
-.tabela-section {
-  display: none;
-  padding: 36px 5% 60px;
-  max-width: 680px;
-  margin: 0 auto;
-}
-.tabela-section.ativa { display: block; }
-.tabela-header {
-  text-align: center;
-  margin-bottom: 32px;
-}
-.tabela-header h2 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(28px, 6vw, 42px);
-  color: var(--verde);
-  margin-bottom: 4px;
-}
-.tabela-header p {
-  font-size: 13px; color: var(--texto-muted); letter-spacing: 2px; text-transform: uppercase;
-}
-.tabela-bloco {
-  background: white;
-  border-radius: 16px;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
-  padding: 28px;
-  margin-bottom: 20px;
-}
-.tabela-bloco-titulo {
-  font-family: "Playfair Display", serif;
-  font-size: 18px;
-  color: var(--verde);
-  margin-bottom: 18px;
-  padding-bottom: 10px;
-  border-bottom: 1.5px solid #f0f0f0;
-  display: flex; align-items: center; gap: 8px;
-}
-.tabela-item {
-  display: flex; align-items: flex-start; gap: 10px;
-  padding: 10px 0;
-  border-bottom: 1px solid #f7f7f7;
-}
-.tabela-item:last-child { border-bottom: none; }
-.tabela-check {
-  color: var(--rosa); font-size: 16px; margin-top: 2px; flex-shrink: 0;
-}
-.tabela-item-info { flex: 1; }
-.tabela-item-nome {
-  font-weight: 600; font-size: 14px; color: var(--texto); margin-bottom: 3px;
-}
-.tabela-item-detalhe {
-  font-size: 13px; color: var(--texto-muted); line-height: 1.5;
-}
-.tabela-item-preco {
-  font-weight: 700; font-size: 15px; color: var(--verde);
-  white-space: nowrap; margin-left: 8px; align-self: center;
-}
-@media (max-width: 600px) {
-  .tabela-bloco { padding: 20px 16px; }
-}
-
 /* GRID DE PRODUTOS */
 .produtos-section { padding: 36px 5% 60px; }
 .produtos-titulo {
@@ -482,99 +420,7 @@ footer a:hover { opacity: 1; }
   <button class="filtro-btn" onclick="filtrar('umbigo', this)">✨ Umbigo</button>
   <button class="filtro-btn" onclick="filtrar('intimo', this)">🌸 Íntimo</button>
   <button class="filtro-btn" onclick="filtrar('acessorio', this)">🎀 Acessórios</button>
-  <button class="filtro-btn filtro-tabela" onclick="mostrarTabela(this)">💰 Tabela de Valores</button>
 </div>
-
-<!-- TABELA DE VALORES -->
-<section class="tabela-section" id="tabela-section">
-  <div class="tabela-header">
-    <h2>Tabela de Valores</h2>
-    <p>Piercing de Luxo · Serviços &amp; Preços</p>
-  </div>
-
-  <!-- PERFURAÇÃO -->
-  <div class="tabela-bloco">
-    <div class="tabela-bloco-titulo">💉 Perfuração</div>
-
-    <div class="tabela-item">
-      <span class="tabela-check">✓</span>
-      <div class="tabela-item-info">
-        <div class="tabela-item-nome">Orelha · Sobrancelha · Nariz · Mamilo · Umbigo</div>
-        <div class="tabela-item-detalhe">Valor do serviço de perfuração + valor da jóia à escolher</div>
-      </div>
-      <div class="tabela-item-preco">R$ 60,00</div>
-    </div>
-
-    <div class="tabela-item">
-      <span class="tabela-check">✓</span>
-      <div class="tabela-item-info">
-        <div class="tabela-item-nome">Perfuração Íntima Genital Feminina</div>
-        <div class="tabela-item-detalhe">Valor do serviço de perfuração + valor da jóia à escolher</div>
-      </div>
-      <div class="tabela-item-preco">R$ 150,00</div>
-    </div>
-
-    <div class="tabela-item">
-      <span class="tabela-check">✓</span>
-      <div class="tabela-item-info">
-        <div class="tabela-item-nome">Lóbulo 1º / 2º ou 3º Furo</div>
-        <div class="tabela-item-detalhe">Valor do serviço com a jóia básica de titânio inclusa</div>
-      </div>
-      <div class="tabela-item-preco">R$ 150,00</div>
-    </div>
-
-    <div class="tabela-item">
-      <span class="tabela-check">✓</span>
-      <div class="tabela-item-info">
-        <div class="tabela-item-nome">Perfuração Humanizada em Bebê</div>
-        <div class="tabela-item-detalhe">Serviço com jóia em aço cirúrgico antialérgico inclusa</div>
-      </div>
-      <div class="tabela-item-preco">R$ 200,00</div>
-    </div>
-  </div>
-
-  <!-- LASER -->
-  <div class="tabela-bloco">
-    <div class="tabela-bloco-titulo">✨ Laser Terapia para Cicatrização</div>
-
-    <div class="tabela-item">
-      <span class="tabela-check">✓</span>
-      <div class="tabela-item-info">
-        <div class="tabela-item-nome">Sessão avulsa</div>
-      </div>
-      <div class="tabela-item-preco">R$ 10,00</div>
-    </div>
-
-    <div class="tabela-item">
-      <span class="tabela-check">✓</span>
-      <div class="tabela-item-info">
-        <div class="tabela-item-nome">Pacote com 3 sessões</div>
-      </div>
-      <div class="tabela-item-preco">R$ 25,00</div>
-    </div>
-  </div>
-
-  <!-- HIGIENIZAÇÃO -->
-  <div class="tabela-bloco">
-    <div class="tabela-bloco-titulo">🧴 Higienização de Jóias e Perfurações</div>
-
-    <div class="tabela-item">
-      <span class="tabela-check">✓</span>
-      <div class="tabela-item-info">
-        <div class="tabela-item-nome">Até 10 jóias</div>
-      </div>
-      <div class="tabela-item-preco">R$ 30,00</div>
-    </div>
-
-    <div class="tabela-item">
-      <span class="tabela-check">✓</span>
-      <div class="tabela-item-info">
-        <div class="tabela-item-nome">Acima de 10 jóias</div>
-      </div>
-      <div class="tabela-item-preco">R$ 40,00</div>
-    </div>
-  </div>
-</section>
 
 <!-- PRODUTOS -->
 <section class="produtos-section" id="produtos-section">
@@ -757,17 +603,9 @@ function filtrar(cat, btn) {
   categoriaAtiva = cat;
   document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('ativo'));
   btn.classList.add('ativo');
-  document.getElementById('tabela-section').classList.remove('ativa');
-  document.getElementById('produtos-section').style.display = '';
   renderProdutos(cat);
 }
 
-function mostrarTabela(btn) {
-  document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('ativo'));
-  btn.classList.add('ativo');
-  document.getElementById('produtos-section').style.display = 'none';
-  document.getElementById('tabela-section').classList.add('ativa');
-}
 
 // ── CARRINHO ─────────────────────────────────────────────────────────
 function addCarrinho(id) {
@@ -890,7 +728,7 @@ function finalizarWhatsApp() {
     return;
   }
   const total = carrinho.reduce((s, i) => s + i.preco * i.qtd, 0);
-  const baseUrl = window.location.href.split('#')[0];
+  const baseUrl = 'https://piercingdeluxo.com.br/catalogo.html';
   let msg = '';
   if (carrinho.length === 1) {
     const i = carrinho[0];
